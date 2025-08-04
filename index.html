@@ -1,100 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="FinDaddy Consultancy - Solution for Every Financial Need">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FinDaddy Consultancy</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #003b82;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services, .contact, .about, .footer {
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    .services h2, .about h2, .contact h2 {
+      margin-bottom: 20px;
+    }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+    }
+    .service-box img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      color: #004aad;
+      font-size: 24px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #004aad;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: #002e66;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="assets/logo.png" alt="FinDaddy Logo">
-      <h1>FinDaddy Consultancy</h1>
-      <p>Solution For Every Financial Need</p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://www.instagram.com/findaddy.finance" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Your Trusted Financial Partner</h2>
-    <p>Loans, Insurance & Investment – All Under One Roof</p>
-  </section>
-
-  <section id="about" class="about">
+    <h1>FinDaddy Consultancy</h1>
+    <p>Solution For Every Financial Need</p>
+  </header>  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>  <section class="about" id="about">
     <h2>About Us</h2>
-    <p>FinDaddy Consultancy is your one-stop destination for every financial service you need — from home loans to smart investments. Based in Mumbai and Ahmedabad, we provide expert solutions to empower your financial journey.</p>
-  </section>
-
-  <section id="services" class="services">
+    <p>At FinDaddy Consultancy, we provide personalized financial solutions to meet every need—from loans and insurance to investments. With our headquarters in Mumbai and Ahmedabad, our mission is to empower individuals and businesses through expert financial guidance and support.</p>
+  </section>  <section class="services" id="services">
     <h2>Our Services</h2>
-
-    <div class="service-category">
-      <h3><i class="fas fa-hand-holding-usd"></i> Loans</h3>
-      <div class="cards">
-        <div class="card">
-          <img src="https://cdn.pixabay.com/photo/2018/01/04/18/41/house-3064046_1280.jpg" alt="Home Loan" />
-          <h4>Home Loan</h4>
-          <p>Get quick and easy home loans with competitive rates.</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.pixabay.com/photo/2018/03/31/21/52/loan-3278129_1280.jpg" alt="Mortgage Loan" />
-          <h4>Mortgage Loan</h4>
-          <p>Secure your property to fulfill your financial needs.</p>
-        </div>
-        <!-- More loan services... -->
+    <div class="service-list">
+      <div class="service-box">
+        <img src="images/home-loan.jpg" alt="Home Loan">
+        <h3>Home Loan</h3>
+        <p>Buy your dream home with best rate offers & expert support.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/mortgage-loan.jpg" alt="Mortgage Loan">
+        <h3>Mortgage Loan</h3>
+        <p>Unlock the value of your property with low interest rates.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/business-loan.jpg" alt="Business Loan">
+        <h3>Business Loan</h3>
+        <p>Finance your business growth with tailor-made solutions.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/personal-loan.jpg" alt="Personal Loan">
+        <h3>Personal Loan</h3>
+        <p>Instant loans for medical, education, travel, or marriage.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/car-loan.jpg" alt="Car Loan">
+        <h3>Car Loan</h3>
+        <p>Drive home your favorite car with our easy car loans.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/term-insurance.jpg" alt="Term Insurance">
+        <h3>Term Insurance</h3>
+        <p>Secure your family's future with comprehensive term plans.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/health-insurance.jpg" alt="Health Insurance">
+        <h3>Health Insurance</h3>
+        <p>Access quality healthcare with tailored health policies.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/vehicle-insurance.jpg" alt="Vehicle Insurance">
+        <h3>Vehicle Insurance</h3>
+        <p>Cover your vehicle against damages, accidents, and theft.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/general-insurance.jpg" alt="General Insurance">
+        <h3>General Insurance</h3>
+        <p>Protect your home, travel, and more with flexible plans.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/mutual-fund.jpg" alt="Mutual Fund">
+        <h3>Mutual Fund</h3>
+        <p>Invest in mutual funds for long-term financial growth.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/sip.jpg" alt="SIP">
+        <h3>SIP</h3>
+        <p>Start a Systematic Investment Plan with just ₹500/month.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/stock-market.jpg" alt="Stock Market">
+        <h3>Stock Market</h3>
+        <p>Trade smart and build wealth with stock market strategies.</p>
       </div>
     </div>
-
-    <div class="service-category">
-      <h3><i class="fas fa-shield-alt"></i> Insurance</h3>
-      <div class="cards">
-        <div class="card">
-          <img src="https://cdn.pixabay.com/photo/2017/06/10/06/33/life-2381900_1280.jpg" alt="Term Insurance" />
-          <h4>Term Insurance</h4>
-          <p>Protect your family’s future with our best plans.</p>
-        </div>
-        <!-- More insurance services... -->
-      </div>
-    </div>
-
-    <div class="service-category">
-      <h3><i class="fas fa-chart-line"></i> Investment</h3>
-      <div class="cards">
-        <div class="card">
-          <img src="https://cdn.pixabay.com/photo/2018/04/12/21/27/business-3317979_1280.jpg" alt="Mutual Funds" />
-          <h4>Mutual Funds</h4>
-          <p>Diversify your portfolio with expert-guided funds.</p>
-        </div>
-        <!-- More investment services... -->
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
+  </section>  <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p><i class="fas fa-map-marker-alt"></i> Mumbai - Ahmedabad</p>
-    <p><i class="fas fa-phone"></i> +91 8956176195</p>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:findaddy.finance@gmail.com">findaddy.finance@gmail.com</a></p>
-    <form action="https://formspree.io/f/mleqpvzr" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <p><strong>Locations:</strong> Mumbai - Ahmedabad</p>
+    <p><strong>Mobile No:</strong> +91 8956176195</p>
+    <p><strong>Email:</strong> <a href="mailto:findaddy.finance@gmail.com">findaddy.finance@gmail.com</a></p>
+    <p class="social-icons">
+      <a href="https://www.instagram.com/findaddy.finance?igsh=bXgwdDZqczlhdHF0" target="_blank"><i class="fab fa-instagram"></i></a>
+    </p><form action="#" method="POST">
+  <input type="text" placeholder="Your Name" required />
+  <input type="email" placeholder="Your Email" required />
+  <textarea placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 FinDaddy Consultancy. All rights reserved.</p>
   </footer>
 </body>
