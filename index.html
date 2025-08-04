@@ -1,26 +1,37 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinDaddy - Solution For Every Financial Need</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinDaddy Consultancy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-    body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
-    header { background-color: #000; color: #fff; text-align: center; padding: 2rem 1rem; }
-    header img { max-height: 60px; }
-    nav { background-color: #333; display: flex; justify-content: center; gap: 1.5rem; padding: 1rem 0; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .section { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
-    h2 { margin-bottom: 1rem; color: #000; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; }
-    .service { margin-bottom: 2rem; }
-    .service img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
-    .social-box { background-color: #eee; padding: 1rem; text-align: center; border-radius: 8px; margin-top: 2rem; }
-    .social-box a { color: #000; margin: 0 0.5rem; font-size: 1.5rem; }
-    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc; }
-    .contact-form button { background-color: #000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    footer { background-color: #222; color: #fff; text-align: center; padding: 1rem; }
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background: #f4f6f8; color: #333; line-height: 1.6;}
+    header {background: linear-gradient(120deg, #2c3e50, #3498db); color: white; text-align: center; padding: 3rem 1rem;}
+    header img {max-height: 70px; margin-bottom: 1rem;}
+    nav {background: #fff; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999;}
+    nav ul {display: flex; justify-content: center; list-style: none; gap: 2rem;}
+    nav a {text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s;}
+    nav a:hover {color: #3498db;}
+    section {padding: 3rem 1rem; max-width: 1200px; margin: auto;}
+    h2 {margin-bottom: 1rem; color: #2c3e50; font-size: 2rem; position: relative;}
+    h2::after {content: ''; width: 50px; height: 3px; background: #3498db; position: absolute; left: 0; bottom: -10px;}
+    .services-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;}
+    .service-card {background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;}
+    .service-card:hover {transform: translateY(-5px);}
+    .service-card img {width: 100%; height: 180px; object-fit: cover;}
+    .service-card .content {padding: 1rem;}
+    .service-card h3 {margin-bottom: 0.5rem; color: #34495e;}
+    .service-card p {font-size: 0.9rem;}
+    .social-links {text-align: center; margin-top: 2rem;}
+    .social-links a {margin: 0 0.5rem; color: #333; font-size: 1.5rem; transition: color 0.3s;}
+    .social-links a:hover {color: #3498db;}
+    form {background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 600px; margin: auto;}
+    form input, form textarea {width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: 1px solid #ccc;}
+    form button {background: #3498db; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;}
+    form button:hover {background: #2980b9;}
+    footer {text-align: center; background: #2c3e50; color: white; padding: 1rem; margin-top: 3rem;}
   </style>
 </head>
 <body>
@@ -29,103 +40,117 @@
     <h1>FinDaddy Consultancy</h1>
     <p>Solution For Every Financial Need</p>
   </header>  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>  <section class="section" id="about">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <section id="about">
     <h2>About Us</h2>
-    <p>FinDaddy Consultancy is your one-stop solution for every financial need — from loans to investments and insurance. We aim to simplify complex financial decisions with our expert guidance, fast processing, and trusted partnerships.</p>
-  </section>  <section class="section" id="services">
-    <h2>Our Services</h2><div class="service">
-  <img src="https://source.unsplash.com/800x200/?home,loan" alt="Home Loan">
-  <h3>Home Loan</h3>
-  <p>We help you own your dream home with low interest rates, quick approvals, and hassle-free documentation.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?property,loan" alt="Mortgage Loan">
-  <h3>Mortgage Loan</h3>
-  <p>Get funds against your property value to fulfill your business or personal needs with flexible repayment options.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?business,loan" alt="Business Loan">
-  <h3>Business Loan</h3>
-  <p>Fuel your business growth with tailor-made loan plans, low EMIs, and minimal paperwork.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?personal,loan" alt="Personal Loan">
-  <h3>Personal Loan</h3>
-  <p>Meet unexpected personal expenses with our quick and easy personal loan solutions.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?car,loan" alt="Car Loan">
-  <h3>Car Loan</h3>
-  <p>Drive home your dream car with our attractive car loan offers and instant disbursals.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?insurance" alt="Term Insurance">
-  <h3>Term Insurance</h3>
-  <p>Protect your family’s future with our comprehensive and affordable term insurance plans.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?health,insurance" alt="Health Insurance">
-  <h3>Health Insurance</h3>
-  <p>Stay prepared for medical emergencies with customized health insurance coverage for all.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?vehicle,insurance" alt="Vehicle Insurance">
-  <h3>Vehicle Insurance</h3>
-  <p>Drive safe and stress-free with our quick and reliable vehicle insurance policies.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?general,insurance" alt="General Insurance">
-  <h3>General Insurance</h3>
-  <p>Secure your lifestyle, travel, and valuables with our wide range of general insurance plans.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?mutual,fund" alt="Mutual Fund">
-  <h3>Mutual Fund</h3>
-  <p>Invest smartly and grow your wealth with expert-recommended mutual fund portfolios.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?sip,investment" alt="SIP">
-  <h3>SIP</h3>
-  <p>Systematic Investment Plans (SIP) help you build a secure financial future with small monthly investments.</p>
-</div>
-
-<div class="service">
-  <img src="https://source.unsplash.com/800x200/?stock,market" alt="Stock Market">
-  <h3>Stock Market</h3>
-  <p>Get expert guidance to enter the stock market confidently and diversify your investment portfolio.</p>
-</div>
-
-  </section>  <section class="section contact-form" id="contact">
+    <p>FinDaddy is your trusted financial advisor, offering customized solutions for loans, investments, and insurance. We simplify the financial journey for individuals and businesses with transparency, efficiency, and trust. Based in Mumbai & Ahmedabad, we are always within reach.</p>
+  </section>  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?home,loan">
+        <div class="content">
+          <h3>Home Loan</h3>
+          <p>Affordable financing to help you buy your dream home with ease and minimum documentation.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?mortgage">
+        <div class="content">
+          <h3>Mortgage Loan</h3>
+          <p>Unlock the value of your property to fund personal or business needs with flexible terms.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?business,loan">
+        <div class="content">
+          <h3>Business Loan</h3>
+          <p>Financial support tailored for entrepreneurs and SMEs to grow and manage their businesses.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?personal,finance">
+        <div class="content">
+          <h3>Personal Loan</h3>
+          <p>Quick, collateral-free loans to meet your personal needs like travel, wedding, or medical emergencies.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?car,loan">
+        <div class="content">
+          <h3>Car Loan</h3>
+          <p>Easy car financing options with low EMIs and fast approvals to drive your dream vehicle home.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?insurance,life">
+        <div class="content">
+          <h3>Term Insurance</h3>
+          <p>Secure your family’s future with cost-effective and comprehensive term insurance plans.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?health,insurance">
+        <div class="content">
+          <h3>Health Insurance</h3>
+          <p>Protection against rising medical expenses with health plans for individuals & families.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?vehicle,insurance">
+        <div class="content">
+          <h3>Vehicle Insurance</h3>
+          <p>Get peace of mind while driving with our comprehensive two-wheeler & four-wheeler insurance.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?general,insurance">
+        <div class="content">
+          <h3>General Insurance</h3>
+          <p>From travel to home insurance, we provide all-round protection to your valuable assets.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?mutual,fund">
+        <div class="content">
+          <h3>Mutual Funds</h3>
+          <p>Diversify your investments with handpicked mutual fund schemes guided by experts.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?sip,investment">
+        <div class="content">
+          <h3>SIP</h3>
+          <p>Invest monthly, grow steadily — SIPs help you build long-term wealth in a disciplined way.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/featured/?stock,market">
+        <div class="content">
+          <h3>Stock Market</h3>
+          <p>Get personalized support to confidently invest in the Indian stock market.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="contact">
     <h2>Contact Us</h2>
-    <form action="#" method="post">
+    <form>
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p><strong>Location:</strong> Mumbai - Ahmedabad</p>
-    <p><strong>Phone:</strong> +91 8956176195</p>
-    <p><strong>Email:</strong> <a href="mailto:findaddy.finance@gmail.com">findaddy.finance@gmail.com</a></p><div class="social-box">
-  <h3>Follow Us</h3>
-  <a href="https://www.instagram.com/findaddy.finance?igsh=bXgwdDZqczlhdHF0" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="#"><i class="fab fa-facebook"></i></a>
-  <a href="#"><i class="fab fa-linkedin"></i></a>
-  <a href="#"><i class="fab fa-twitter"></i></a>
-</div>
-
+    <div class="social-links">
+      <a href="https://www.instagram.com/findaddy.finance?igsh=bXgwdDZqczlhdHF0" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">📍 Mumbai – Ahmedabad<br>📞 +91 8956176195<br>📧 <a href="mailto:findaddy.finance@gmail.com">findaddy.finance@gmail.com</a></p>
   </section>  <footer>
     <p>&copy; 2025 FinDaddy Consultancy. All rights reserved.</p>
   </footer>
